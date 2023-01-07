@@ -14,6 +14,7 @@ describe("craftTool", () => {
         action: {
           type: "tool.crafted",
           tool: "Sunflower Statue" as any,
+          amount: 1,
         },
       })
     ).toThrow("Tool does not exist");
@@ -29,6 +30,7 @@ describe("craftTool", () => {
         action: {
           type: "tool.crafted",
           tool: "Axe",
+          amount: 1,
         },
       })
     ).toThrow("Insufficient tokens");
@@ -45,6 +47,7 @@ describe("craftTool", () => {
         action: {
           type: "tool.crafted",
           tool: "Pickaxe",
+          amount: 1,
         },
       })
     ).toThrow("Insufficient ingredient: Wood");
@@ -60,6 +63,7 @@ describe("craftTool", () => {
       action: {
         type: "tool.crafted",
         tool: "Axe",
+        amount: 1,
       },
     });
 
@@ -79,6 +83,7 @@ describe("craftTool", () => {
       action: {
         type: "tool.crafted",
         tool: "Pickaxe",
+        amount: 1,
       },
     });
 
@@ -99,6 +104,7 @@ describe("craftTool", () => {
         action: {
           type: "tool.crafted",
           tool: "Axe",
+          amount: 1,
         },
       })
     ).toThrow("Not enough stock");
@@ -119,6 +125,7 @@ it("increments Axe Crafted activity by 1 when 1 axe is crafted", () => {
     action: {
       type: "tool.crafted",
       tool: "Axe",
+      amount: 1,
     },
   });
 
@@ -139,6 +146,7 @@ it("increments SFL spent when axe is crafted", () => {
     action: {
       type: "tool.crafted",
       tool: "Axe",
+      amount: 1,
     },
   });
 
